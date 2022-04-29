@@ -8,7 +8,7 @@ function App() {
                                                       // setTitle é a funcão q vai "alterar" o valor dessa variavel
                                                       // o React faz um algoritimi de reconciliação, q visa ter mais performance,q ao invez de alterar o valor de title, ele cria uma var nova e subistitue por ela
                                                       // por isso q conseguimos "alterar" title msm ele sendo uma contante 
-  const [showContent, setShowContent] = useState('false');
+  const [showContent, setShowContent] = useState(false);
 
   
   function handleTitle(){                                                    

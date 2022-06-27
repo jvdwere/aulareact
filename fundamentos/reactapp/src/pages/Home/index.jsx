@@ -1,20 +1,16 @@
-
 import './styles.css';
 import React, { useState } from 'react';
 
-
-
-
-import { Card } from '../../Componentes/Card';
+import { Card } from '../../Components/Card';
 
 export function Home() {
-    const [studentName, setStudentName] = useState('');
+    const [studentName, setStudentName] = useState('amanda');
     const [students, setStudents] = useState([]);
 
     function handleAddStudent(){
       const newStudent = {
-        name: studentName,
-        time: new Date().toLocaleDateString(pt-br,{
+        name: setStudentName,
+        time: new Date().toLocaleDateString('pt-br',{
           hour: '2-digit',
           minute: '2-digit',
           second: '2-digit',
@@ -31,7 +27,7 @@ export function Home() {
           <input 
             type="text" 
             placeholder="Digite o nome..." 
-            onChange={e => setStudentName(e. target.value)}
+            onChange={e => setStudentName(e.target.value)}
           />
           <button type="button" onClick={handleAddStudent}>
             Adicionar
